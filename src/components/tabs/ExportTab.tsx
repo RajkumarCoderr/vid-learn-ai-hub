@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { FileText, Download } from 'lucide-react';
-import { PdfIcon } from 'lucide-react'; // Changed from FilePdf to PdfIcon
+import { FileText, Download, FilePdf } from 'lucide-react';
 
 interface ExportTabProps {
   videoId: string;
@@ -75,7 +74,7 @@ const ExportTab: React.FC<ExportTabProps> = ({ videoId }) => {
               {exporting && formatType === 'pdf' ? (
                 <div className="spinner mb-2"></div>
               ) : (
-                <PdfIcon size={24} className="mb-2" /> 
+                <FilePdf size={24} className="mb-2" /> 
               )}
               <span className="text-sm">Export as PDF</span>
             </Button>
